@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>偵探檔案：紅心七與文字謎題</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <!-- 遊戲標題區 -->
+    <header id="game-header">
+      <h1>🕵️‍♂️ 案件檔案 #01：紅心七暗號之謎</h1>
+      <div id="progress">進度：<span id="step-number">1</span>/3</div>
+    </header>
+
+    <!-- 視覺小說主要畫面（對話與場景） -->
+    <main id="vn-screen">
+      <div id="scene-box">
+        <p id="speaker-name">名偵探</p>
+        <p id="dialogue-text">正在加載案件數據……</p>
+      </div>
+
+      <!-- 進入門檻（課文解密卡關區） -->
+      <div id="quiz-modal" class="hidden">
+        <div class="quiz-header">
+          <span class="lock-icon">🔒</span>
+          <h3>線索加密鎖：必須通過【課文鑑識】解鎖下一步！</h3>
+        </div>
+        <p id="quiz-question">題目加載中...</p>
+        <div id="quiz-options" class="options-container"></div>
+        <p id="quiz-feedback" class="feedback-text"></p>
+      </div>
+    </main>
+
+    <!-- 底部控制按鈕 -->
+    <footer id="controls">
+      <button id="next-btn">點擊繼續劇情 ▶</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
