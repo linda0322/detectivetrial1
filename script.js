@@ -1,83 +1,103 @@
-// 遊戲腳本數據：將原著推理小說劇情與課文題目交替排列
+// 原著《藍色草》劇情 + 三篇中文課文鑑識題目
 const storyData = [
   {
     type: "dialogue",
-    speaker: "名偵探",
-    text: "一位名為吉爾伯特的年輕人在家中遭到襲擊！現場沒有財物損失，但桌上卻留下一張神秘的撲克牌——『紅心七』。"
+    speaker: "瑪波小姐",
+    icon: "👵",
+    text: "一位身患重病且脾氣暴躁的富家太太——普林格夫人，在一間封閉的房間裡暴斃了！在她死前，曾有一位算命師給了她警告……"
   },
   {
     type: "dialogue",
-    speaker: "助手",
-    text: "長官，這張『紅心七』上面用墨水寫了幾行古怪的文字，似乎是犯人留下的暗號！"
+    speaker: "亨利警官",
+    icon: "👮‍♂️",
+    text: "算命師告訴她：『當牆紙上的藍色老鸛草花朵變成粉紅色時，就是你的死期！』結果案發當晚，牆上的藍花真的變色了！"
   },
   {
     type: "quiz",
-    question: "【課文鑑識：解密紅心七暗號】犯人在紙條上寫著：『夏夜入寺，竹柏影交橫，蓋積水空明也。』這段描述運用了《記承天寺夜游》中比喻『月光與竹柏影子』的手法。請問文中以『積水空明』比喻什麼？",
+    question: "【課文鑑識 1：象徵手法與死亡預言】在《爸爸的花兒落了》中，作者以『夾竹桃落了』象徵父親離世與成長。而在本案中，算命師以『藍色草變色』作為死亡的象徵與伏筆。請問下列關於《爸爸的花兒落了》中『花朵象徵』的理解，何者正確？",
     options: [
-      "A. 澄清積水的池塘",
-      "B. 皎潔明亮的月光",
-      "C. 夜晚稀疏的雲霧",
-      "D. 庭院中茂密的竹林"
+      "A. 夾竹桃凋落僅代表季節轉換，與父親無關",
+      "B. 『花兒落了』雙關了夾竹桃謝了與父親的離世，象徵主角告別童年",
+      "C. 爸爸特別喜歡花，所以花落代表爸爸生病痊癒",
+      "D. 主角畢業典禮上的花代表她考試失敗"
     ],
     answer: 1, // B
-    explanation: "答對了！《記承天寺夜游》中以『積水空明』比喻澄澈的月光，『藻、荇交橫』比喻月光投射下的竹柏影子。"
+    explanation: "答對了！《爸爸的花兒落了》標題與文中的花落，均借物抒情，象徵父親離世及主角英子的成長。"
   },
   {
     type: "dialogue",
-    speaker: "名偵探",
-    text: "破解了！犯人指的是『澄澈月光下被隱藏的秘密』！我們檢查一下房間窗外照射進來月光的位置！"
-  },
-  {
-    type: "dialogue",
-    speaker: "助手",
-    text: "找到了！月光照耀的牆角地板下有一個暗格，裡面藏有一本沈默已久的日記，裡面記載著吉爾伯特小時候的事情……"
+    speaker: "瑪波小姐",
+    icon: "👵",
+    text: "死者房間的窗戶與門當時都從內部鎖上，形成了一個密室！但案發當晚，護士曾透過窗外照射進來的月光，看見了桌上裝著不明液體的藥瓶……"
   },
   {
     type: "quiz",
-    question: "【課文鑑識：審視童年日記】日記中寫道：『余憶童稚時，能張目對日，明察秋毫，見藐小之物必細察其紋理，故時有物外之趣。』請問《閒情記趣》中『物外之趣』的意思是？",
+    question: "【課文鑑識 2：密室環境與月光描寫】護士聲稱當晚月色皎潔，能看清房內景象。這讓人聯想到《記承天寺夜游》中對月光的經典寫景：『庭下如積水空明，水中藻、荇交橫，蓋竹柏影也。』請問這句話運用了什麼修辭手法與寫景技巧？",
     options: [
-      "A. 購買昂貴海外物品的樂趣",
-      "B. 超越事物本身、透過想像力獲得的特殊情趣",
-      "C. 在戶外觀察大自然各種植物的樂趣",
-      "D. 擺脫物質欲望後的輕鬆感"
+      "A. 運用借代手法，將月光比喻成竹子",
+      "B. 運用比喻（暗喻/明喻）與動靜結合，將澄澈月光比作積水，竹柏影子比作水中水草",
+      "C. 運用誇張手法，形容承天寺夜晚積水成災",
+      "D. 運用擬人手法，賦予月亮與竹柏人的情感"
     ],
     answer: 1, // B
-    explanation: "分析正確！『物外之趣』指觀察微小事物時，經由超脫字面或事物表象的想像力所產生的樂趣。"
+    explanation: "鑑識精準！蘇軾以『積水空明』喻月光之澄澈，以『藻荇交橫』喻竹柏交錯之影，虛實相生。"
   },
   {
     type: "dialogue",
-    speaker: "名偵探",
-    text: "日記最後一頁被扯掉了，只留下桌上一盆枯萎的夾竹桃。這暗示著吉爾伯特與父親之間隱藏的感情變故！"
+    speaker: "瑪波小姐",
+    icon: "👵",
+    text: "等一下！壁紙上的花朵不可能憑空自己改變顏色。這一定是某人利用了化學藥劑（如酸鹼指示劑）噴灑在牆上！"
+  },
+  {
+    type: "dialogue",
+    speaker: "亨利警官",
+    icon: "👮‍♂️",
+    text: "難道是護士？或者是每天來遞送氣喘噴霧的醫生？我們需要仔細觀察房間裡看似不起眼的微小細節！"
   },
   {
     type: "quiz",
-    question: "【課文鑑識：分析現場夾竹桃線索】在《爸爸的花兒落了》一文中，作者以『夾竹桃落了』以及『爸爸的花兒落了』來象徵什麼？",
+    question: "【課文鑑識 3：微觀觀察與想像破案】偵探需要從極微小的痕跡中發現真相。這正符合《閒情記趣》中所強調的觀察力：『見藐小之物必細察其紋理，故時有物外之趣。』請問文中『物外之趣』產生的關鍵要素是什麼？",
     options: [
-      "A. 象徵家中的花園缺乏照顧而荒廢",
-      "B. 象徵父親生病住院，即將痊癒歸來",
-      "C. 象徵父親離世，自己必須告別童年、走向成熟成長",
-      "D. 象徵小學畢業典禮的圓滿結束"
+      "A. 必須擁有昂貴的顯微鏡等觀察工具",
+      "B. 豐富的想像力配合專注仔細的觀察",
+      "C. 到戶外大自然中尋找罕見的珍禽異獸",
+      "D. 熟讀古代文言文典籍"
     ],
-    answer: 2, // C
-    explanation: "極佳的推理！『花兒落了』既是寫實（夾竹桃謝了），也是象徵父親的去世，代表主角英子從此要承擔家庭責任，真正長大。"
+    answer: 1, // B
+    explanation: "極佳的推理！沈復在《閒情記趣》中透過將蚊子想像成鶴、叢草想像成樹林，靠的就是『觀察力 + 想像力』來獲得超脫物外的樂趣。"
   },
   {
     type: "dialogue",
-    speaker: "名偵探",
-    text: "太棒了！結合三條線索：月光下的隱密暗格、童年想像力的日記、以及象徵父親離世的夾竹桃……我知道誰是幕後真凶了！"
+    speaker: "瑪波小姐",
+    icon: "👵",
+    text: "真相大白了！兇手就是那位經常來遞送『氣喘噴霧』的護士！她在噴霧瓶裡偷偷混入了氨水（鹼性氣體）。"
+  },
+  {
+    type: "dialogue",
+    speaker: "瑪波小姐",
+    icon: "👵",
+    text: "牆上的藍色花朵早已被預先塗上了石蕊試劑（或植物色素）。當氨水氣體揮發接觸到壁紙時，藍色的花朵就會立刻變成紫色/粉紅色！"
+  },
+  {
+    type: "dialogue",
+    speaker: "亨利警官",
+    icon: "👮‍♂️",
+    text: "普林格夫人原本就有嚴重的心臟病，看到預言中的『藍花變色』後極度恐懼，導致心臟病發猝死！這是一宗完美的心理謀殺案！"
   },
   {
     type: "dialogue",
     speaker: "系統",
-    text: "🎉 第一章解密成功！你成功完成了案件分析與三篇課文的鑑識！"
+    icon: "🎉",
+    text: "恭喜你！成功協助瑪波小姐破獲《藍色草》命案，並完美通過了《爸爸的花兒落了》、《記承天寺夜游》及《閒情記趣》三篇課文的鑑識挑戰！"
   }
 ];
 
 let currentIndex = 0;
 
 // DOM 元素
-const speakerEl = document.getElementById("speaker-name");
-const dialogueEl = document.getElementById("dialogue-text");
+const speakerNameEl = document.getElementById("speaker-name");
+const speakerIconEl = document.getElementById("speaker-icon");
+const dialogueTextEl = document.getElementById("dialogue-text");
 const nextBtn = document.getElementById("next-btn");
 const quizModal = document.getElementById("quiz-modal");
 const quizQuestionEl = document.getElementById("quiz-question");
@@ -85,18 +105,19 @@ const quizOptionsEl = document.getElementById("quiz-options");
 const quizFeedbackEl = document.getElementById("quiz-feedback");
 const stepNumberEl = document.getElementById("step-number");
 
-// 初始化遊戲
+// 渲染步驟
 function renderStep() {
   const currentStep = storyData[currentIndex];
   stepNumberEl.textContent = currentIndex + 1;
 
   if (currentStep.type === "dialogue") {
     quizModal.classList.add("hidden");
-    speakerEl.textContent = currentStep.speaker;
-    dialogueEl.textContent = currentStep.text;
+    speakerNameEl.textContent = currentStep.speaker;
+    speakerIconEl.textContent = currentStep.icon || "💬";
+    dialogueTextEl.textContent = currentStep.text;
     nextBtn.style.display = "inline-block";
   } else if (currentStep.type === "quiz") {
-    nextBtn.style.display = "none"; // 答對前隱藏「下一頁」按鈕
+    nextBtn.style.display = "none"; // 答對前鎖定「推進」
     quizModal.classList.remove("hidden");
     quizQuestionEl.textContent = currentStep.question;
     quizFeedbackEl.textContent = "";
@@ -116,23 +137,23 @@ function renderStep() {
 function checkAnswer(selectedIndex, correctIndex, explanation) {
   if (selectedIndex === correctIndex) {
     quizFeedbackEl.className = "feedback-text feedback-correct";
-    quizFeedbackEl.textContent = "✅ " + explanation + "（點擊下方按鈕繼續推進案情）";
-    nextBtn.style.display = "inline-block"; // 解鎖下一頁
+    quizFeedbackEl.textContent = "✅ " + explanation + "（破案線索已解鎖，請點擊下方按鈕）";
+    nextBtn.style.display = "inline-block";
   } else {
     quizFeedbackEl.className = "feedback-text feedback-wrong";
-    quizFeedbackEl.textContent = "❌ 鑑識失敗！線索不吻合，請重新檢視課文文意再試一次。";
+    quizFeedbackEl.textContent = "❌ 鑑識失敗！線索邏輯不符，請重新檢視課文文意！";
   }
 }
 
-// 點擊「繼續」按鈕
+// 繼續推進
 nextBtn.addEventListener("click", () => {
   if (currentIndex < storyData.length - 1) {
     currentIndex++;
     renderStep();
   } else {
-    alert("本案已結案！感謝你的偵探推理與中文解密！");
+    alert("🏆 案件順利偵破！你已掌握了三篇課文的核心考點！");
   }
 });
 
-// 開始遊戲
+// 初始化
 renderStep();
