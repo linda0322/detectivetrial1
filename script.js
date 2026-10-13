@@ -3,14 +3,14 @@ const storyData = [
   {
     type: "dialogue",
     speaker: "旁白",
-    text: "標題：藍色天竺葵 (The Blue Geranium) by Agatha Christie\n背景：20世紀英國餐桌，燭光搖曳，氣氛神祕。",
+    text: "藍色天竺葵 (The Blue Geranium) by Agatha Christie",
     portrait: null,
     filter: false
   },
   {
     type: "dialogue",
     speaker: "Miss Marple",
-    text: "你是 Miss Marple，一位明察秋毫的老小姐，也是 Tuesday Night Club 的成員。大家在星期二晚上聚會，每人講述一個未曾公開的懸疑故事。",
+    text: "你是 Miss Marple，一位明察秋毫的老小姐，也是 Tuesday Night Club 的成員。Tuesday Night Club 的成員喜歡在星期二晚上聚會，每人會講一個其他人沒聽過的故事。",
     portrait: "👵 Miss Marple",
     filter: false
   },
@@ -19,52 +19,52 @@ const storyData = [
     speaker: "Miss Marple",
     question: "【詞語理解】「明察秋毫」是甚麼意思？",
     options: [
-      "A: 感官敏銳，比其他人更快感受到秋意",
-      "B: 觀察力強，能看到細微之處",
-      "C: 視力出眾，能看到別人肉眼看不見的東西"
+      "感官敏銳，比其他人更快感受到秋意",
+      "觀察力強，能看到細微之處",
+      "視力出眾，能看到別人肉眼看不見的東西"
     ],
     answer: 1,
     points: 10,
-    explanation: "答對了！明察秋毫比喻為人觀察力強，能看見極細微的事物。"
+    explanation: "答對了！"
   },
   {
     type: "checkbox",
     speaker: "Miss Marple",
-    question: "【寫作手法】你今天戴了一雙漂亮的露指手套，肩上披着一條老式的三角披肩，用一條飾帶繫上了雪白的頭髮.這是甚麼描寫手法？（可選多項，每個正確選項 5 分）",
+    question: "【寫作手法】「你今天戴了一雙漂亮的露指手套，肩上披着一條老式的三角披肩，用一條飾帶繫上了雪白的頭髮。」這是甚麼描寫手法？（可選多項，每個正確選項 5 分）",
     options: [
-      "A: 肖像描寫",
-      "B: 語言描寫",
-      "C: 行動描寫",
-      "D: 直接描寫",
-      "E: 間接描寫"
+      "肖像描寫",
+      "語言描寫",
+      "行動描寫",
+      "直接描寫",
+      "間接描寫"
     ],
     answer: [0, 3],
     points: 10,
-    explanation: "答對了！這是透過外貌直接描寫人物特徵（肖像描寫 / 直接描寫）。"
+    explanation: "答對了！"
   },
   {
     type: "quiz",
     speaker: "Miss Marple",
-    question: "【人物性格】你今天戴了一雙漂亮的露指手套，肩上披着一條老式的三角披肩，用一條飾帶繫上了雪白的頭髮.你是一個怎樣的人？",
+    question: "【人物性格】「你今天戴了一雙漂亮的露指手套，肩上披着一條老式的三角披肩，用一條飾帶繫上了雪白的頭髮。」你是一個怎樣的人？",
     options: [
-      "A: 悉心打扮",
-      "B: 不修邊幅"
+      "悉心打扮",
+      "不修邊幅"
     ],
     answer: 0,
     points: 10,
-    explanation: "正確！展現出優雅細緻的生活態度。"
+    explanation: "答對了！"
   },
   {
     type: "dialogue",
     speaker: "旁白",
-    text: "今天分享故事的人是 Bantry 夫婦，即 Colonel Arthur 和他的妻子 Dolly。同場還有老警察 Henry、醫生 Dr Lloyd 和女演員 Jane。\n你和 Dr Lloyd 正在討論養老院及地區護理人員讓人生疑的毛病。",
+    text: "今天分享故事的人是 Bantry 夫婦，即 Colonel Arthur 和他的妻子 Dolly。同場還有老警察 Henry、醫生 Dr Lloyd 和女演員 Jane。你和 Dr Lloyd 正在討論養老院及地區護理人員讓人生疑的毛病。",
     portrait: "👥 聚會現場",
     filter: false
   },
   {
     type: "dialogue",
     speaker: "Dolly",
-    text: "Arthur，你快點分享你朋友 George 家裡發生的奇怪故事，聽聽大家對這件事的看法。",
+    text: "Arthur，快點分享你朋友 George 家裡發生的奇怪故事，聽聽大家對這件事的看法。",
     portrait: "👩 Dolly",
     filter: false
   },
@@ -73,17 +73,17 @@ const storyData = [
     type: "writing",
     speaker: "系統任務",
     words: [
-      { term: "興奮", jyutping: "hing1 fan5" },
-      { term: "愉快", jyutping: "jyu4 faai3" },
-      { term: "幸福", jyutping: "hang6 fuk1" },
-      { term: "失望", jyutping: "sat1 mong6" }
+      { term: "1", jyutping: "hing1 fan5" },
+      { term: "2", jyutping: "jyu4 faai3" },
+      { term: "3", jyutping: "hang6 fuk1" },
+      { term: "4", jyutping: "sat1 mong6" }
     ],
     pointsPerWord: 150
   },
   {
     type: "dialogue",
     speaker: "Arthur",
-    text: "Arthur：你們應該都不認識 George，他是一位很好的人。他的妻子 Mary 身體不好，現在已經去世了，但她還在世的時候，沒少折騰 George。我不懷疑她確實有病，反正她反覆無常，待人苛刻，一天到晚怨天尤人，實在是難以理解。",
+    text: "你們應該都不認識 George，他是一位很好的人。他的妻子 Mary 身體不好，現在已經去世了，但她還在世的時候，沒少折騰 George。我不懷疑她確實有病，反正她反覆無常，待人苛刻，一天到晚怨天尤人，實在是難以理解。",
     portrait: "🧑 Arthur",
     filter: true,
     clue: "死者：脾氣古怪的 Mary"
@@ -99,7 +99,7 @@ const storyData = [
   {
     type: "dialogue",
     speaker: "Arthur",
-    text: "Mary 很喜歡算命，相信超自然力量。George 雖然不相信，但也沒有阻止妻子的迷信行為，覺得她高興就好，只是自己拒絕參與，但太太還是不滿意。",
+    text: "Mary 很喜歡算命，相信超自然力量。George 雖然不相信，但也沒有阻止妻子的迷信，覺得她高興就好，只是自己拒絕參與，但 Mary 還是不滿意。",
     portrait: "🧑 Arthur",
     filter: true
   },
@@ -114,34 +114,34 @@ const storyData = [
   {
     type: "quiz",
     speaker: "旁白",
-    question: "【突擊課文問答】《閒情記趣》記述了沈復童年時從觀察藐小微物中得到 XXXX 的生活片段。",
+    question: "《閒情記趣》記述了沈復童年時從觀察藐小微物中得到 XXXX 的生活片段。",
     options: [
-      "A: 明察秋毫",
-      "B: 物外之趣",
-      "C: 鶴唳雲端"
+      "明察秋毫",
+      "物外之趣",
+      "鶴唳雲端"
     ],
     answer: 1,
     points: 10,
-    explanation: "答對了！是「物外之趣」。"
+    explanation: "答對了！"
   },
   {
     type: "checkbox",
     speaker: "旁白",
-    question: "【突擊課文問答】《閒情記趣》表現了作者的甚麼特點？（可選多項，每個正確 5 分）",
+    question: "《閒情記趣》表現了作者的甚麼特點？（可選多項，每個正確 5 分）",
     options: [
-      "A: 觀察力",
-      "B: 同情心",
-      "C: 行動力",
-      "D: 想像力"
+      "觀察力",
+      "同情心",
+      "行動力",
+      "想像力"
     ],
     answer: [0, 3],
     points: 10,
-    explanation: "正確！展現了細緻的觀察力與豐富的想像力。"
+    explanation: "答對了！"
   },
   {
     type: "dialogue",
     speaker: "Arthur",
-    text: "太太把以前曾經照顧過她的一個老護士請了回來，Nurse Copling 在對付精神病患方面很有經驗。George 說 Nurse Copling 是位理性的人，能以一種獨特的方式容忍太太的暴躁和神經質。",
+    text: "Mary 把以前曾經照顧過她的一個老護士請了回來，Nurse Copling 在對付精神病患方面很有經驗。George 說 Nurse Copling 是位理性的人，能以一種獨特的方式容忍太太的暴躁和神經質。",
     portrait: "🧑 Arthur",
     filter: true,
     clue: "嫌疑人 3 號：經歷豐富而理性沉穩的老護士 Nurse Copling"
@@ -199,16 +199,16 @@ const storyData = [
   {
     type: "quiz",
     speaker: "旁白",
-    question: "【突擊課文問答】《閒情記趣》中童年的沈復將蚊想像成甚麼？",
+    question: "《閒情記趣》中童年的沈復將蚊想像成甚麼？",
     options: [
-      "A: 蝦蟆",
-      "B: 群鶴",
-      "C: 蜂鳥",
-      "D: 飛機"
+      "蝦蟆",
+      "群鶴",
+      "蜂鳥",
+      "飛機"
     ],
     answer: 1,
     points: 10,
-    explanation: "答對了！「夏蚊成雷，私擬作群鶴舞於空中」。"
+    explanation: "答對了！"
   },
   {
     type: "dialogue",
@@ -216,7 +216,7 @@ const storyData = [
     text: "當天回家後，George 就發現太太格外躁動不安，像往常一樣躺在輪椅上，不時嗅著手裡拿著的嗅鹽（smelling salts）。",
     portrait: "🧑 Arthur",
     filter: true,
-    clue: "物品：嗅鹽（smelling salts）"
+    clue: "物品：嗅鹽"
   },
   {
     type: "dialogue",
@@ -259,7 +259,7 @@ const storyData = [
     text: "你的花瓶裡有藍色的花！趕快把這些扔掉，這家裡不能有藍色的花，永遠也不要有，藍色的花會帶來惡運！我不止一次跟你說過，藍色是我的剋星，我天生反感藍色！",
     portrait: "👩 Mary",
     filter: true,
-    clue: "物品：帶來厄運的藍色花"
+    clue: "物品：藍花"
   },
   {
     type: "dialogue",
@@ -285,30 +285,30 @@ const storyData = [
   {
     type: "quiz",
     speaker: "旁白",
-    question: "【突擊課文問答】《閒情記趣》中童年的沈復將 XX 想像為樹林，將 YY 想像為野獸，將 ZZ 想像為山谷與山丘，XX、YY、ZZ 分別是甚麼？",
+    question: "《閒情記趣》中童年的沈復將 XX 想像為樹林，將 YY 想像為野獸，將 ZZ 想像為山谷與山丘，XX、YY、ZZ 分別是甚麼？",
     options: [
-      "A: 草叢；蝦蟆；石頭",
-      "B: 花叢；蟲蟻；泥土",
-      "C: 草叢；蟲蟻；泥土",
-      "D: 草叢；蝦蟆；石頭"
+      "草叢；蝦蟆；石頭",
+      "花叢；蟲蟻；泥土",
+      "草叢；蟲蟻；泥土",
+      "草叢；蝦蟆；石頭"
     ],
     answer: 2,
     points: 10,
-    explanation: "答對了！「以叢草為林，以蟲蟻為獸，以土礫凸者為邱，凹者為壑」。"
+    explanation: "答對了！"
   },
   {
     type: "quiz",
     speaker: "旁白",
-    question: "【突擊課文問答】《閒情記趣》中童年的沈復最後將哪種動物驅趕去別的院子？",
+    question: "《閒情記趣》中童年的沈復最後將哪種動物驅趕去別的院子？",
     options: [
-      "A: 蝦蟆",
-      "B: 飛蛾",
-      "C: 蟲蟻",
-      "D: 青蛙"
+      "蝦蟆",
+      "飛蛾",
+      "蟲蟻",
+      "青蛙"
     ],
     answer: 0,
     points: 10,
-    explanation: "答對了！「二蟲盡為所吞，神遊其中，怡然自得。忽有龐然大物，拔山倒樹而來，蓋一蝦蟆也……鞭數十，驅之別院」。"
+    explanation: "答對了！"
   },
   {
     type: "dialogue",
@@ -391,15 +391,15 @@ const storyData = [
   {
     type: "quiz",
     speaker: "旁白",
-    question: "【課文考點】藍色花 XX 了 Mary 的死亡？（提示：《爸爸的花兒落了》中的「夾竹桃」）",
+    question: "藍色花 XX 了 Mary 的死亡？（提示：《爸爸的花兒落了》中的「夾竹桃」）",
     options: [
-      "A: 比喻",
-      "B: 象徵",
-      "C: 襯托"
+      "比喻",
+      "象徵",
+      "襯托"
     ],
     answer: 1,
     points: 10,
-    explanation: "正確！是「象徵」。"
+    explanation: "答對了！"
   },
   {
     type: "dialogue",
@@ -411,7 +411,7 @@ const storyData = [
   {
     type: "dialogue",
     speaker: "Arthur",
-    text: "George 和 Nurse Copling 認為那裡本來就有藍花。那天清晨之前，Mary 從沒注意到那裡有藍花，況且第二天晚上就是滿月，這快讓她崩潰了。",
+    text: "那天清晨之前，Mary 從沒注意到那裡有藍花，況且第二天晚上就是滿月，這快讓她崩潰了。",
     portrait: "🧑 Arthur",
     filter: true
   },
@@ -446,7 +446,7 @@ const storyData = [
   {
     type: "dialogue",
     speaker: "Arthur",
-    text: "對，她擅長多種運動，有着健康的膚色和漂亮的藍眼睛，要不是因為 Mary ⋯⋯反正他們非常要好。",
+    text: "對，她擅長多種運動，有着健康的膚色和漂亮的藍眼睛，要不是因為 Mary ⋯⋯ 反正他們非常要好。",
     portrait: "🧑 Arthur",
     filter: true,
     clue: "嫌疑人 5 號：為 George 打抱不平的女性好友 Jeanie"
@@ -468,7 +468,7 @@ const storyData = [
   {
     type: "dialogue",
     speaker: "Arthur",
-    text: "Mary 後來都開始自暴自棄，一遍又一遍地重複：「藍色的報春花——警告；藍色的蜀葵——危險；藍色的天竺葵——死亡。」最後連護士都開始害怕，想 George 帶走太太。",
+    text: "Mary 開始自暴自棄，一遍又一遍地重複：「藍色的報春花——警告；藍色的蜀葵——危險；藍色的天竺葵——死亡。」最後連護士都開始害怕，想 George 帶走太太。",
     portrait: "🧑 Arthur",
     filter: true
   },
@@ -482,7 +482,7 @@ const storyData = [
   {
     type: "dialogue",
     speaker: "Arthur",
-    text: "次日清晨，Mary 到了 8 點半還沒有動靜，護士敲門卻沒人應聲，George 把門砸開，只看到直挺挺躺在床上的太太。醫生說 Mary 在 8 小時前就死了。她的嗅鹽瓶子躺在她身邊，牆上粉紅色的天竺葵變成了鮮亮的深藍色。",
+    text: "次日清晨，Mary 到了 8 點半還沒有動靜，護士敲門卻沒人應聲，George 把門砸開，只看到直挺挺躺在床上的太太。George 去找醫生，醫生說 Mary 在 8 小時前就死了。她的嗅鹽瓶子躺在她身邊，牆上粉紅色的天竺葵變成了鮮亮的深藍色。",
     portrait: "🧑 Arthur",
     filter: true,
     clue: "物品：煤氣"
@@ -497,7 +497,7 @@ const storyData = [
   {
     type: "dialogue",
     speaker: "Arthur",
-    text: "Mary 以前說過哪天她死了，她希望每個人都知道兇手是 George，然後 George 在前一天剛好配了些除草劑（herbicide）準備除草，還給太太端了杯牛奶。",
+    text: "Mary 以前說過哪天她死了，她希望每個人都知道兇手是 George，然後 George 在前一天剛好配了些除草劑準備除草，還給太太端了杯牛奶。",
     portrait: "🧑 Arthur",
     filter: true,
     clue: "物品：除草劑、牛奶"
@@ -505,7 +505,7 @@ const storyData = [
   {
     type: "dialogue",
     speaker: "Arthur",
-    text: "但最後驗屍報告也沒有甚麼結果。這件事由始至終都很離奇，那個 Zarida 的地址好像是假的，當地人說沒有這個人。Nurse Carstairs 也說沒聽過這個人。",
+    text: "最後驗屍報告也沒有甚麼結果，這件事由始至終都很離奇。那個 Zarida 的地址好像是假的，當地人說沒有這個人。Nurse Carstairs 也說沒聽過這個人。",
     portrait: "🧑 Arthur",
     filter: true
   },
@@ -528,9 +528,9 @@ const storyData = [
     speaker: "旁白",
     question: "你覺得 Mary 是自殺、因迷信被嚇死還是被謀殺？",
     options: [
-      "A: 自殺",
-      "B: 因迷信被嚇死",
-      "C: 謀殺"
+      "自殺",
+      "因迷信被嚇死",
+      "謀殺"
     ],
     answer: 2,
     points: 10,
@@ -541,8 +541,8 @@ const storyData = [
     speaker: "旁白",
     question: "你覺得謀殺 Mary 的兇手是一個人，還是一群人？",
     options: [
-      "A: 一個人",
-      "B: 一群人"
+      "一個人",
+      "一群人"
     ],
     answer: 0,
     points: 10,
@@ -553,16 +553,16 @@ const storyData = [
     speaker: "旁白",
     question: "你覺得謀殺 Mary 的兇手是誰？（暫不揭曉，答對最後加分）",
     options: [
-      "A: George",
-      "B: Nurse Carstairs",
-      "C: Nurse Copling",
-      "D: Zarida",
-      "E: Jeanie"
+      "George",
+      "Nurse Carstairs",
+      "Nurse Copling",
+      "Zarida",
+      "Jeanie"
     ],
     answer: 2,
     points: 0,
     isInitialSuspect: true,
-    explanation: "記錄完畢，請繼續聆聽偵探推理！"
+    explanation: "記錄完畢！"
   },
   {
     type: "dialogue",
@@ -590,8 +590,8 @@ const storyData = [
     speaker: "Miss Marple",
     question: "Arthur，你是指？\n你覺得謀殺 Mary 的兇手是誰？",
     options: [
-      "A: Nurse Carstairs",
-      "B: Nurse Copling"
+      "Nurse Carstairs",
+      "Nurse Copling"
     ],
     answer: 1,
     explanation: "太棒了！兇手正是 Nurse Copling。"
@@ -601,16 +601,16 @@ const storyData = [
     speaker: "Miss Marple",
     question: "Miss Marple：她曾在那房子裡呆過，又經常與 Mary 吵架。但最直接證明 Nurse Copling 是兇手的證據是：",
     options: [
-      "A：嗅鹽",
-      "B：藍色花",
-      "C：Zarida 的信",
-      "D：煤氣",
-      "E：除草劑",
-      "F：牛奶"
+      "嗅鹽",
+      "藍色花",
+      "Zarida 的信",
+      "煤氣",
+      "除草劑",
+      "牛奶"
     ],
     answer: 2,
     points: 50,
-    explanation: "答對了！Zarida 的信是破案關鍵聯結。"
+    explanation: "答對了！"
   },
   {
     type: "dialogue",
@@ -624,11 +624,11 @@ const storyData = [
     speaker: "旁白",
     question: "你覺得 Mary 的死因與哪個物品最有關？",
     options: [
-      "A：嗅鹽",
-      "B：藍色花",
-      "C：煤氣",
-      "D：除草劑",
-      "E：牛奶"
+      "嗅鹽",
+      "藍色花",
+      "煤氣",
+      "除草劑",
+      "牛奶"
     ],
     answer: 0,
     points: 50,
@@ -766,7 +766,7 @@ function renderStep() {
     submitBtn.style.background = "#2ed573";
     submitBtn.style.color = "#000";
     submitBtn.style.fontWeight = "bold";
-    submitBtn.textContent = "✅ 確認提交答案";
+    submitBtn.textContent = "✅ 確認答案";
     submitBtn.onclick = () => {
       checkCheckboxAnswer(selectedIndexes, step.answer, step.points, step.explanation);
     };
@@ -777,7 +777,7 @@ function renderStep() {
     dialogueTextEl.textContent = "【現場書寫挑戰】";
     nextBtn.style.display = "none";
     quizModal.classList.remove("hidden");
-    quizQuestionEl.textContent = "請老師／家長剔選學生正確書寫的詞語（若未挑選任何詞語將扣 500 分）：";
+    quizQuestionEl.textContent = "請剔選學生正確書寫的詞語（若未挑選任何詞語將扣 500 分）：";
     quizOptionsEl.innerHTML = "";
 
     let checkedWritingIndexes = [];
