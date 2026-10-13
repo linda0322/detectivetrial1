@@ -3,41 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>瑪波小姐探案：藍色草的死亡預言</title>
+  <title>藍色天竺葵 - The Blue Geranium</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="game-container">
+    <!-- 頂部導航欄：左側人物檔案，右側分數 -->
     <header id="game-header">
-      <h1>👵 瑪波小姐探案：藍色草之謎</h1>
-      <div id="progress">線索解密進度：<span id="step-number">1</span>/6</div>
+      <button id="profile-btn">📁 人物與線索檔案</button>
+      <div id="score-box">分數：<span id="score-val">0</span> 分</div>
     </header>
 
+    <!-- 遊戲主畫面（背景、角色立繪、對話框） -->
     <main id="vn-screen">
-      <!-- 視覺對話框 -->
-      <div id="scene-box">
-        <div id="speaker-tag">
-          <span id="speaker-icon">👤</span>
-          <span id="speaker-name">瑪波小姐</span>
+      <!-- 角色圖像顯示區 -->
+      <div id="character-container">
+        <div id="character-portrait" class="hidden">
+          <span id="char-avatar">🕵️‍♀️</span>
+          <span id="char-label">角色</span>
         </div>
-        <p id="dialogue-text">載入案情資料中……</p>
       </div>
 
-      <!-- 中文課文卡關門檻彈窗 -->
-      <div id="quiz-modal" class="hidden">
-        <div class="quiz-header">
-          <span class="lock-icon">🔒</span>
-          <h3>【案情鑑識門檻】須通過課文解析以取得下一條線索！</h3>
+      <!-- 對話框 -->
+      <div id="scene-box">
+        <div id="speaker-tag">
+          <span id="speaker-name">旁白</span>
         </div>
+        <p id="dialogue-text">載入遊戲中……</p>
+      </div>
+
+      <!-- 互動/問答彈窗 -->
+      <div id="quiz-modal" class="hidden">
+        <h3 id="quiz-title">📝 案情鑑識挑戰</h3>
         <p id="quiz-question">題目載入中...</p>
         <div id="quiz-options" class="options-container"></div>
+        <div id="writing-input-area" class="hidden">
+          <p class="writing-tip">請在筆記本上書寫以下詞語（家長/老師見證後點擊確認）：</p>
+          <div id="word-list-display"></div>
+          <button id="writing-done-btn" class="opt-btn">✅ 我已完成書寫並展示</button>
+        </div>
         <p id="quiz-feedback" class="feedback-text"></p>
       </div>
     </main>
 
+    <!-- 底部控制按鈕 -->
     <footer id="controls">
-      <button id="next-btn">點擊推進劇情 ▶</button>
+      <button id="next-btn">點擊繼續推進 ▶</button>
     </footer>
+  </div>
+
+  <!-- 人物檔案彈窗 Modal -->
+  <div id="profile-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>📂 偵探記事簿（已收集的線索與嫌疑人）</h2>
+      <ul id="clue-list">
+        <!-- 動態生成線索 -->
+      </ul>
+      <button id="close-profile-btn" class="opt-btn">關閉檔案</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
