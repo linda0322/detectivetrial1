@@ -1,6 +1,5 @@
 // 遊戲劇本與問題數據庫
 const storyData = [
-  // 0
   {
     type: "dialogue",
     speaker: "旁白",
@@ -8,7 +7,6 @@ const storyData = [
     portrait: null,
     filter: false
   },
-  // 1
   {
     type: "dialogue",
     speaker: "Miss Marple",
@@ -16,7 +14,6 @@ const storyData = [
     portrait: "👵 Miss Marple",
     filter: false
   },
-  // 2 - Q1
   {
     type: "quiz",
     speaker: "Miss Marple",
@@ -26,15 +23,14 @@ const storyData = [
       "B: 觀察力強，能看到細微之處",
       "C: 視力出眾，能看到別人肉眼看不見的東西"
     ],
-    answer: 1, // B
+    answer: 1,
     points: 10,
     explanation: "答對了！明察秋毫比喻為人觀察力強，能看見極細微的事物。"
   },
-  // 3 - Q2 (Checkbox)
   {
     type: "checkbox",
     speaker: "Miss Marple",
-    question: "【寫作手法】你今天戴了一雙漂亮的露指手套，肩上披着一條老式的三角披肩，用一條飾帶繫上了雪白的頭髮。這是甚麼描寫手法？（可選多項，每個正確選項 5 分）",
+    question: "【寫作手法】你今天戴了一雙漂亮的露指手套，肩上披着一條老式的三角披肩，用一條飾帶繫上了雪白的頭髮.這是甚麼描寫手法？（可選多項，每個正確選項 5 分）",
     options: [
       "A: 肖像描寫",
       "B: 語言描寫",
@@ -42,15 +38,14 @@ const storyData = [
       "D: 直接描寫",
       "E: 間接描寫"
     ],
-    answer: [0, 3], // A, D
+    answer: [0, 3],
     points: 10,
     explanation: "答對了！這是透過外貌直接描寫人物特徵（肖像描寫 / 直接描寫）。"
   },
-  // 4 - Q3
   {
     type: "quiz",
     speaker: "Miss Marple",
-    question: "【人物性格】你今天戴了一雙漂亮的露指手套，肩上披着一條老式的三角披肩，用一條飾帶繫上了雪白的頭髮。你是一個怎樣的人？",
+    question: "【人物性格】你今天戴了一雙漂亮的露指手套，肩上披着一條老式的三角披肩，用一條飾帶繫上了雪白的頭髮.你是一個怎樣的人？",
     options: [
       "A: 悉心打扮",
       "B: 不修邊幅"
@@ -59,7 +54,6 @@ const storyData = [
     points: 10,
     explanation: "正確！展現出優雅細緻的生活態度。"
   },
-  // 5
   {
     type: "dialogue",
     speaker: "旁白",
@@ -67,7 +61,6 @@ const storyData = [
     portrait: "👥 聚會現場",
     filter: false
   },
-  // 6
   {
     type: "dialogue",
     speaker: "Dolly",
@@ -75,7 +68,7 @@ const storyData = [
     portrait: "👩 Dolly",
     filter: false
   },
-  // 7 - 現場書寫挑戰 (Writing Task)
+  // 現場書寫挑戰（改為 Checkbox 評分，沒勾選任何一項 -500 分）
   {
     type: "writing",
     speaker: "系統任務",
@@ -85,10 +78,8 @@ const storyData = [
       { term: "幸福", jyutping: "hang6 fuk1" },
       { term: "失望", jyutping: "sat1 mong6" }
     ],
-    pointsPerWord: 150,
-    penalty: -500
+    pointsPerWord: 150
   },
-  // 8
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -97,7 +88,6 @@ const storyData = [
     filter: true,
     clue: "死者：脾氣古怪的 Mary"
   },
-  // 9
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -106,7 +96,6 @@ const storyData = [
     filter: true,
     clue: "嫌疑人 1 號：品性善良而處處忍讓 Mary 的丈夫 George"
   },
-  // 10
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -114,7 +103,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 11
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -123,7 +111,6 @@ const storyData = [
     filter: true,
     clue: "嫌疑人 2 號：曾與 Mary 親近，但最後不知為何被趕走的年輕護士 Nurse Carstairs"
   },
-  // 12 - Q4
   {
     type: "quiz",
     speaker: "旁白",
@@ -137,7 +124,6 @@ const storyData = [
     points: 10,
     explanation: "答對了！是「物外之趣」。"
   },
-  // 13 - Q5 (Checkbox)
   {
     type: "checkbox",
     speaker: "旁白",
@@ -148,11 +134,10 @@ const storyData = [
       "C: 行動力",
       "D: 想像力"
     ],
-    answer: [0, 3], // A, D
+    answer: [0, 3],
     points: 10,
     explanation: "正確！展現了細緻的觀察力與豐富的想像力。"
   },
-  // 14
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -161,7 +146,6 @@ const storyData = [
     filter: true,
     clue: "嫌疑人 3 號：經歷豐富而理性沉穩的老護士 Nurse Copling"
   },
-  // 15
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -169,7 +153,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 16
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -177,7 +160,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 17
   {
     type: "dialogue",
     speaker: "Nurse Copling",
@@ -186,7 +168,6 @@ const storyData = [
     filter: true,
     clue: "嫌疑人 4 號：來歷不明的女巫 Zarida"
   },
-  // 18
   {
     type: "dialogue",
     speaker: "George",
@@ -194,7 +175,6 @@ const storyData = [
     portrait: "👨 George",
     filter: true
   },
-  // 19
   {
     type: "dialogue",
     speaker: "Nurse Copling",
@@ -202,7 +182,6 @@ const storyData = [
     portrait: "👩‍⚕️ Nurse Copling",
     filter: true
   },
-  // 20
   {
     type: "dialogue",
     speaker: "George",
@@ -210,7 +189,6 @@ const storyData = [
     portrait: "👨 George",
     filter: true
   },
-  // 21
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -218,7 +196,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 22 - Q6
   {
     type: "quiz",
     speaker: "旁白",
@@ -233,7 +210,6 @@ const storyData = [
     points: 10,
     explanation: "答對了！「夏蚊成雷，私擬作群鶴舞於空中」。"
   },
-  // 23
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -242,7 +218,6 @@ const storyData = [
     filter: true,
     clue: "物品：嗅鹽（smelling salts）"
   },
-  // 24
   {
     type: "dialogue",
     speaker: "Mary",
@@ -250,7 +225,6 @@ const storyData = [
     portrait: "👩 Mary",
     filter: true
   },
-  // 25
   {
     type: "dialogue",
     speaker: "George",
@@ -258,7 +232,6 @@ const storyData = [
     portrait: "👨 George",
     filter: true
   },
-  // 26
   {
     type: "dialogue",
     speaker: "Mary",
@@ -266,7 +239,6 @@ const storyData = [
     portrait: "👩 Mary",
     filter: true
   },
-  // 27
   {
     type: "dialogue",
     speaker: "George",
@@ -274,7 +246,6 @@ const storyData = [
     portrait: "👨 George",
     filter: true
   },
-  // 28
   {
     type: "dialogue",
     speaker: "Mary",
@@ -282,7 +253,6 @@ const storyData = [
     portrait: "👩 Mary",
     filter: true
   },
-  // 29
   {
     type: "dialogue",
     speaker: "Mary",
@@ -291,7 +261,6 @@ const storyData = [
     filter: true,
     clue: "物品：帶來厄運的藍色花"
   },
-  // 30
   {
     type: "dialogue",
     speaker: "George",
@@ -299,7 +268,6 @@ const storyData = [
     portrait: "👨 George",
     filter: true
   },
-  // 31
   {
     type: "dialogue",
     speaker: "Mary",
@@ -307,7 +275,6 @@ const storyData = [
     portrait: "👩 Mary",
     filter: true
   },
-  // 32
   {
     type: "dialogue",
     speaker: "George",
@@ -315,7 +282,6 @@ const storyData = [
     portrait: "👨 George",
     filter: true
   },
-  // 33 - Q7
   {
     type: "quiz",
     speaker: "旁白",
@@ -330,7 +296,6 @@ const storyData = [
     points: 10,
     explanation: "答對了！「以叢草為林，以蟲蟻為獸，以土礫凸者為邱，凹者為壑」。"
   },
-  // 34 - Q8
   {
     type: "quiz",
     speaker: "旁白",
@@ -345,7 +310,6 @@ const storyData = [
     points: 10,
     explanation: "答對了！「二蟲盡為所吞，神遊其中，怡然自得。忽有龐然大物，拔山倒樹而來，蓋一蝦蟆也……鞭數十，驅之別院」。"
   },
-  // 35
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -353,7 +317,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 36
   {
     type: "dialogue",
     speaker: "Zarida",
@@ -362,7 +325,6 @@ const storyData = [
     filter: true,
     clue: "物品：Zarida 的信"
   },
-  // 37
   {
     type: "dialogue",
     speaker: "George",
@@ -370,7 +332,6 @@ const storyData = [
     portrait: "👨 George",
     filter: true
   },
-  // 38
   {
     type: "dialogue",
     speaker: "Nurse Copling",
@@ -378,7 +339,6 @@ const storyData = [
     portrait: "👩‍⚕️ Nurse Copling",
     filter: true
   },
-  // 39
   {
     type: "dialogue",
     speaker: "George",
@@ -386,7 +346,6 @@ const storyData = [
     portrait: "👨 George",
     filter: true
   },
-  // 40
   {
     type: "dialogue",
     speaker: "Nurse Copling",
@@ -394,7 +353,6 @@ const storyData = [
     portrait: "👩‍⚕️ Nurse Copling",
     filter: true
   },
-  // 41
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -402,7 +360,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 42
   {
     type: "dialogue",
     speaker: "Dolly",
@@ -410,7 +367,6 @@ const storyData = [
     portrait: "👩 Dolly",
     filter: false
   },
-  // 43
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -418,7 +374,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 44
   {
     type: "dialogue",
     speaker: "Dolly",
@@ -426,7 +381,6 @@ const storyData = [
     portrait: "👩 Dolly",
     filter: false
   },
-  // 45
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -434,7 +388,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 46 - Q9
   {
     type: "quiz",
     speaker: "旁白",
@@ -448,7 +401,6 @@ const storyData = [
     points: 10,
     explanation: "正確！是「象徵」。"
   },
-  // 47
   {
     type: "dialogue",
     speaker: "Miss Marple",
@@ -456,7 +408,6 @@ const storyData = [
     portrait: "👵 Miss Marple",
     filter: false
   },
-  // 48
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -464,7 +415,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 49
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -472,7 +422,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 50
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -480,7 +429,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 51
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -488,7 +436,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 52
   {
     type: "dialogue",
     speaker: "Miss Marple",
@@ -496,7 +443,6 @@ const storyData = [
     portrait: "👵 Miss Marple",
     filter: false
   },
-  // 53
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -505,7 +451,6 @@ const storyData = [
     filter: true,
     clue: "嫌疑人 5 號：為 George 打抱不平的女性好友 Jeanie"
   },
-  // 54
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -513,7 +458,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 55
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -521,7 +465,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 56
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -529,7 +472,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 57
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -537,24 +479,21 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 58
   {
     type: "dialogue",
     speaker: "Arthur",
     text: "次日清晨，Mary 到了 8 點半還沒有動靜，護士敲門卻沒人應聲，George 把門砸開，只看到直挺挺躺在床上的太太。醫生說 Mary 在 8 小時前就死了。她的嗅鹽瓶子躺在她身邊，牆上粉紅色的天竺葵變成了鮮亮的深藍色。",
     portrait: "🧑 Arthur",
-    filter: true
+    filter: true,
+    clue: "物品：煤氣"
   },
-  // 59
   {
     type: "dialogue",
     speaker: "Arthur",
     text: "醫生和護士都說聞到了某種氣味，像是煤氣，但一點點不足以致死。George 說他聞不到。",
     portrait: "🧑 Arthur",
-    filter: true,
-    clue: "物品：煤氣"
+    filter: true
   },
-  // 60
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -563,7 +502,6 @@ const storyData = [
     filter: true,
     clue: "物品：除草劑、牛奶"
   },
-  // 61
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -571,7 +509,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 62
   {
     type: "dialogue",
     speaker: "Miss Marple",
@@ -579,7 +516,6 @@ const storyData = [
     portrait: "👵 Miss Marple",
     filter: false
   },
-  // 63
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -587,7 +523,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 64 - Q10
   {
     type: "quiz",
     speaker: "旁白",
@@ -601,7 +536,6 @@ const storyData = [
     points: 10,
     explanation: "正確！這是一宗精心策劃的謀殺案。"
   },
-  // 65 - Q11
   {
     type: "quiz",
     speaker: "旁白",
@@ -614,7 +548,6 @@ const storyData = [
     points: 10,
     explanation: "正確！兇手是單獨一人。"
   },
-  // 66 - Q12 (Suspect initial guess)
   {
     type: "quiz",
     speaker: "旁白",
@@ -626,12 +559,11 @@ const storyData = [
       "D: Zarida",
       "E: Jeanie"
     ],
-    answer: 2, // C
-    points: 0, // 暫不加分，保留記錄
+    answer: 2,
+    points: 0,
     isInitialSuspect: true,
     explanation: "記錄完畢，請繼續聆聽偵探推理！"
   },
-  // 67
   {
     type: "dialogue",
     speaker: "Miss Marple",
@@ -639,7 +571,6 @@ const storyData = [
     portrait: "👵 Miss Marple",
     filter: false
   },
-  // 68
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -647,7 +578,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 69
   {
     type: "dialogue",
     speaker: "Miss Marple",
@@ -655,7 +585,6 @@ const storyData = [
     portrait: "👵 Miss Marple",
     filter: false
   },
-  // 70 - Q13 (Suspect confirm with conditional points)
   {
     type: "suspectConfirm",
     speaker: "Miss Marple",
@@ -664,10 +593,9 @@ const storyData = [
       "A: Nurse Carstairs",
       "B: Nurse Copling"
     ],
-    answer: 1, // B
+    answer: 1,
     explanation: "太棒了！兇手正是 Nurse Copling。"
   },
-  // 71 - Q14
   {
     type: "quiz",
     speaker: "Miss Marple",
@@ -680,11 +608,10 @@ const storyData = [
       "E：除草劑",
       "F：牛奶"
     ],
-    answer: 2, // C
+    answer: 2,
     points: 50,
     explanation: "答對了！Zarida 的信是破案關鍵聯結。"
   },
-  // 72
   {
     type: "dialogue",
     speaker: "Miss Marple",
@@ -692,7 +619,6 @@ const storyData = [
     portrait: "👵 Miss Marple",
     filter: false
   },
-  // 73 - Q15
   {
     type: "quiz",
     speaker: "旁白",
@@ -708,7 +634,6 @@ const storyData = [
     points: 50,
     explanation: "答對了！嗅鹽瓶內的氰化物是致命關鍵。"
   },
-  // 74
   {
     type: "dialogue",
     speaker: "Miss Marple",
@@ -716,7 +641,6 @@ const storyData = [
     portrait: "👵 Miss Marple",
     filter: false
   },
-  // 75
   {
     type: "dialogue",
     speaker: "Arthur",
@@ -724,7 +648,6 @@ const storyData = [
     portrait: "🧑 Arthur",
     filter: true
   },
-  // 76
   {
     type: "dialogue",
     speaker: "Miss Marple",
@@ -732,7 +655,6 @@ const storyData = [
     portrait: "👵 Miss Marple",
     filter: false
   },
-  // 77 (Final completion)
   {
     type: "complete",
     speaker: "系統",
@@ -744,6 +666,7 @@ let currentIndex = 0;
 let score = 0;
 let collectedClues = [];
 let initialSuspectAnswer = null;
+let currentQuestionFailed = false; // 追蹤當前題目是否曾經答錯
 
 // DOM 元素
 const scoreValEl = document.getElementById("score-val");
@@ -754,13 +677,9 @@ const charLabelEl = document.getElementById("char-label");
 const nextBtn = document.getElementById("next-btn");
 
 const quizModal = document.getElementById("quiz-modal");
-const quizTitleEl = document.getElementById("quiz-title");
 const quizQuestionEl = document.getElementById("quiz-question");
 const quizOptionsEl = document.getElementById("quiz-options");
 const quizFeedbackEl = document.getElementById("quiz-feedback");
-const writingInputArea = document.getElementById("writing-input-area");
-const wordListDisplay = document.getElementById("word-list-display");
-const writingDoneBtn = document.getElementById("writing-done-btn");
 
 const profileBtn = document.getElementById("profile-btn");
 const profileModal = document.getElementById("profile-modal");
@@ -776,9 +695,9 @@ function updateScore(pts) {
 function renderStep() {
   const step = storyData[currentIndex];
   quizModal.classList.add("hidden");
-  writingInputArea.classList.add("hidden");
   quizOptionsEl.style.display = "flex";
   nextBtn.style.display = "inline-block";
+  currentQuestionFailed = false; // 切換新步驟時重置答錯狀態
 
   // 處理線索收集
   if (step.clue && !collectedClues.includes(step.clue)) {
@@ -854,24 +773,62 @@ function renderStep() {
     quizOptionsEl.appendChild(submitBtn);
 
   } else if (step.type === "writing") {
+    // 現場書寫挑戰：Checkbox 逐個詞語剔選，若沒挑選任何一項則扣 500 分
     dialogueTextEl.textContent = "【現場書寫挑戰】";
     nextBtn.style.display = "none";
     quizModal.classList.remove("hidden");
-    quizQuestionEl.textContent = "請現場書寫指定詞語（如未完成書寫扣 500 分）：";
-    quizOptionsEl.style.display = "none";
-    writingInputArea.classList.remove("hidden");
-    quizFeedbackEl.textContent = "";
+    quizQuestionEl.textContent = "請老師／家長剔選學生正確書寫的詞語（若未挑選任何詞語將扣 500 分）：";
+    quizOptionsEl.innerHTML = "";
 
-    wordListDisplay.innerHTML = step.words.map(w => `<div style="margin:6px 0; font-size:1.1rem; color:#ffa502;">✍️ ${w.term} <span style="font-size:0.9rem; color:#a4b0be;">(${w.jyutping})</span></div>`).join('');
+    let checkedWritingIndexes = [];
+    step.words.forEach((w, idx) => {
+      const label = document.createElement("label");
+      label.className = "opt-btn";
+      label.style.display = "flex";
+      label.style.alignItems = "center";
+      label.style.gap = "12px";
+      label.style.cursor = "pointer";
 
-    writingDoneBtn.onclick = () => {
-      const totalEarned = step.words.length * step.pointsPerWord;
-      updateScore(totalEarned);
-      quizFeedbackEl.className = "feedback-text feedback-correct";
-      quizFeedbackEl.textContent = `🎉 書寫完成！獲得 +${totalEarned} 分！`;
-      writingInputArea.classList.add("hidden");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.style.transform = "scale(1.3)";
+      checkbox.onchange = () => {
+        if (checkbox.checked) {
+          if (!checkedWritingIndexes.includes(idx)) checkedWritingIndexes.push(idx);
+        } else {
+          checkedWritingIndexes = checkedWritingIndexes.filter(i => i !== idx);
+        }
+      };
+
+      const span = document.createElement("span");
+      span.innerHTML = `✍️ <b>${w.term}</b> <span style="font-size:0.9rem; color:#a4b0be;">(${w.jyutping})</span>`;
+
+      label.appendChild(checkbox);
+      label.appendChild(span);
+      quizOptionsEl.appendChild(label);
+    });
+
+    const submitWritingBtn = document.createElement("button");
+    submitWritingBtn.className = "opt-btn";
+    submitWritingBtn.style.background = "#2ed573";
+    submitWritingBtn.style.color = "#000";
+    submitWritingBtn.style.fontWeight = "bold";
+    submitWritingBtn.textContent = "✅ 確認書寫評分";
+    submitWritingBtn.onclick = () => {
+      if (checkedWritingIndexes.length === 0) {
+        updateScore(-500);
+        quizFeedbackEl.className = "feedback-text feedback-wrong";
+        quizFeedbackEl.textContent = "⚠️ 沒有勾選任何正確詞語，扣 500 分！";
+      } else {
+        const earned = checkedWritingIndexes.length * step.pointsPerWord;
+        updateScore(earned);
+        quizFeedbackEl.className = "feedback-text feedback-correct";
+        quizFeedbackEl.textContent = `🎉 評分完成！獲得 +${earned} 分！`;
+      }
+      quizOptionsEl.style.display = "none";
       nextBtn.style.display = "inline-block";
     };
+    quizOptionsEl.appendChild(submitWritingBtn);
 
   } else if (step.type === "suspectConfirm") {
     dialogueTextEl.textContent = "【終極推理確認】";
@@ -886,22 +843,23 @@ function renderStep() {
       btn.className = "opt-btn";
       btn.textContent = opt;
       btn.onclick = () => {
-        // 根據用戶之前在 Q12 的猜測計分邏輯
         let bonus = 0;
-        if (idx === step.answer) { // 答對選了 Copling (索引 1)
-          if (initialSuspectAnswer === 2) { // 之前就猜 C (Copling)
+        if (idx === step.answer) {
+          if (initialSuspectAnswer === 2) {
             bonus = 60;
-          } else if (initialSuspectAnswer === 3) { // 之前猜 Zarida (索引 3)
+          } else if (initialSuspectAnswer === 3) {
             bonus = 20;
-          } else { // 之前猜錯
+          } else {
             bonus = 10;
           }
+          if (currentQuestionFailed) bonus = 0; // 若先前此步驟失敗過也不加額外獎勵
           updateScore(bonus);
           quizFeedbackEl.className = "feedback-text feedback-correct";
           quizFeedbackEl.textContent = `✅ ${step.explanation} 獲得附加獎勵 +${bonus} 分！`;
         } else {
+          currentQuestionFailed = true;
           quizFeedbackEl.className = "feedback-text feedback-wrong";
-          quizFeedbackEl.textContent = `❌ 推理有誤。兇手其實是 Nurse Copling。`;
+          quizFeedbackEl.textContent = `❌ 推理有誤。兇手其實是 Nurse Copling。（注意：再次嘗試將不獲加分）`;
         }
         nextBtn.style.display = "inline-block";
       };
@@ -914,40 +872,52 @@ function renderStep() {
   }
 }
 
-// 檢查單選答案
+// 檢查單選答案（答錯再答不加分）
 function checkQuizAnswer(selectedIndex, correctIndex, points, explanation, isInitial) {
   if (isInitial) {
     initialSuspectAnswer = selectedIndex;
   }
 
   if (selectedIndex === correctIndex) {
-    updateScore(points);
+    let awarded = currentQuestionFailed ? 0 : points;
+    updateScore(awarded);
     quizFeedbackEl.className = "feedback-text feedback-correct";
-    quizFeedbackEl.textContent = `✅ ${explanation} (+${points} 分)`;
+    if (currentQuestionFailed) {
+      quizFeedbackEl.textContent = `✅ ${explanation}（因先前曾答錯，本次不加分 0 分）`;
+    } else {
+      quizFeedbackEl.textContent = `✅ ${explanation} (+${points} 分)`;
+    }
     nextBtn.style.display = "inline-block";
   } else {
+    currentQuestionFailed = true;
     quizFeedbackEl.className = "feedback-text feedback-wrong";
-    quizFeedbackEl.textContent = "❌ 答案不正確，請再思索一下原著細節！";
+    quizFeedbackEl.textContent = "❌ 答案不正確，請再思索一下原著細節！（注意：再次答對將不獲加分）";
   }
 }
 
-// 檢查多選答案
+// 檢查多選答案（答錯再答不加分）
 function checkCheckboxAnswer(selected, correct, totalPoints, explanation) {
   const isMatch = selected.length === correct.length && selected.every(val => correct.includes(val));
   let earned = 0;
   if (isMatch) {
-    earned = totalPoints;
+    earned = currentQuestionFailed ? 0 : totalPoints;
+    updateScore(earned);
+    quizFeedbackEl.className = "feedback-text feedback-correct";
+    if (currentQuestionFailed) {
+      quizFeedbackEl.textContent = `✅ 完全答對！${explanation}（因先前曾答錯，本次不加分 0 分）`;
+    } else {
+      quizFeedbackEl.textContent = `✅ 完全答對！${explanation} (+${totalPoints} 分)`;
+    }
+    nextBtn.style.display = "inline-block";
   } else {
-    // 每個正確選中得 5 分
+    currentQuestionFailed = true;
     let correctCount = selected.filter(val => correct.includes(val)).length;
     let wrongCount = selected.filter(val => !correct.includes(val)).length;
-    earned = Math.max(0, (correctCount * 5) - (wrongCount * 5));
+    let partialEarned = currentQuestionFailed ? 0 : Math.max(0, (correctCount * 5) - (wrongCount * 5));
+    updateScore(partialEarned);
+    quizFeedbackEl.className = "feedback-text feedback-wrong";
+    quizFeedbackEl.textContent = `⚠️ 部分正確或有誤。${explanation} (+${partialEarned} 分，注意：再次嘗試正確將不獲額外加分)`;
   }
-
-  updateScore(earned);
-  quizFeedbackEl.className = "feedback-text " + (isMatch ? "feedback-correct" : "feedback-wrong");
-  quizFeedbackEl.textContent = `${isMatch ? "✅ 完全答對！" : "⚠️ 部分正確。"} ${explanation} (+${earned} 分)`;
-  nextBtn.style.display = "inline-block";
 }
 
 // 點擊「繼續」按鈕
